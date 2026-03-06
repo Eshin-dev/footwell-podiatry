@@ -1,4 +1,4 @@
-name: footwell - Deploy to GitHub Pages
+name: Footwell - Deploy to GitHub Pages
 
 on:
   push:
