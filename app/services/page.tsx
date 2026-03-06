@@ -62,9 +62,14 @@ const services = [
 ];
 
 export default function ServicesPage() {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
     return (
         <main className="bg-[radial-gradient(circle_at_12%_16%,#e6f2f0_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#f4f8f8_0%,#f8fbfb_46%,#eaf3f3_100%)] pb-20 text-[#12363a]">
-            <section className="relative overflow-hidden bg-[url('/main-background-foot.webp')] bg-cover bg-center">
+            <section
+                className="relative overflow-hidden bg-cover bg-center"
+                style={{ backgroundImage: `url('${basePath}/main-background-foot.webp')` }}
+            >
                 <div className="absolute inset-0 bg-[#f4f8f8]/85" aria-hidden="true" />
                 <div className="relative mx-auto w-full max-w-6xl px-6 pb-14 pt-20 md:pb-16 md:pt-24">
                     <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]">

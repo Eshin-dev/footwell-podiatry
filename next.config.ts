@@ -7,6 +7,9 @@ const basePath = isGitHubPages && !isUserOrOrgSite ? `/${repositoryName}` : "";
 
 const nextConfig: NextConfig = {
   output: "export",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     // next/image optimization requires a server; disable for static export.
     unoptimized: true,

@@ -1,10 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <main className="bg-[radial-gradient(circle_at_12%_16%,#e6f2f0_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#f4f8f8_0%,#f8fbfb_46%,#eaf3f3_100%)] text-[#12363a]">
       <section
-        className="relative w-full overflow-hidden bg-[url('/main-background-foot.webp')] bg-cover bg-center"
+        className="relative w-full overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: `url('${basePath}/main-background-foot.webp')` }}
         aria-labelledby="hero-title"
       >
         <div className="absolute inset-0 bg-[#f4f8f8]/85" aria-hidden="true" />
@@ -13,7 +17,7 @@ export default function Home() {
             <div className="flex justify-center">
               <Image
                 className="mb-6 block h-auto w-[min(560px,44vw)] max-w-full"
-                src="/footwell_logo.webp"
+                src={`${basePath}/footwell_logo.webp`}
                 alt="Footwell Podiatry logo"
                 width={560}
                 height={179}
@@ -38,12 +42,12 @@ export default function Home() {
               >
                 Book an appointment
               </a>
-              <a
+              <Link
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#c6dedb] bg-[#f4faf9] px-4 py-2 font-semibold transition-colors hover:border-[#2f7b79]"
                 href="/services"
               >
                 View services
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -119,7 +123,7 @@ export default function Home() {
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 md:grid-cols-[0.9fr_1.1fr] md:items-start">
           <div className="overflow-hidden border border-[#c6dedb] bg-white shadow-[0_10px_30px_rgba(20,63,66,0.08)]">
             <Image
-              src="/meet_rachel.png"
+              src={`${basePath}/meet_rachel.png`}
               alt="Rachel Rayner, HCPC registered podiatrist"
               width={925}
               height={1439}
