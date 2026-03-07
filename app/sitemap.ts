@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl } from "./seo";
 
+export const dynamic = "force-static";
+
 const routes = ["/", "/services", "/what-is-biomechanics"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
