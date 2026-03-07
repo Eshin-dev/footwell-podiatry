@@ -37,13 +37,13 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a
-                className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#2f7b79] px-4 py-2 font-semibold text-[#f8fffe] transition-colors hover:bg-[#266866]"
+                className="inline-flex min-h-11 items-center justify-center rounded-none bg-[#2f7b79] px-4 py-2 font-semibold text-[#f8fffe] transition-colors hover:bg-[#266866]"
                 href="#contact"
               >
                 Book an appointment
               </a>
               <Link
-                className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#c6dedb] bg-[#f4faf9] px-4 py-2 font-semibold transition-colors hover:border-[#2f7b79]"
+                className="inline-flex min-h-11 items-center justify-center rounded-none border border-[#c6dedb] bg-[#f4faf9] px-4 py-2 font-semibold transition-colors hover:border-[#2f7b79]"
                 href="/services"
               >
                 View services
