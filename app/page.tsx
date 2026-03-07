@@ -241,8 +241,30 @@ export default function Home() {
             </p>
             <p>
               <strong className="text-[#12363a]">Clinic:</strong> 13 Northway,
-              Broughton, Preston
+              Broughton, Preston PR3 5JX
             </p>
+            <div className="mt-1 border-t border-[#c6dedb] pt-4">
+              <p className="mb-2 font-semibold text-[#12363a]">Opening Hours</p>
+              <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
+                <dt className="font-medium text-[#12363a]">Mon</dt>
+                <dd>10:00 - 16:00</dd>
+                <dt className="font-medium text-[#12363a]">Tue</dt>
+                <dd>Closed</dd>
+                <dt className="font-medium text-[#12363a]">Wed</dt>
+                <dd>Closed</dd>
+                <dt className="font-medium text-[#12363a]">Thu</dt>
+                <dd>10:00 - 19:00</dd>
+                <dt className="font-medium text-[#12363a]">Fri</dt>
+                <dd>10:00 - 16:00</dd>
+                <dt className="font-medium text-[#12363a]">Sat</dt>
+                <dd>09:00 - 12:00</dd>
+                <dt className="font-medium text-[#12363a]">Sun</dt>
+                <dd>Closed</dd>
+              </dl>
+              <p className="mt-3 text-sm">Closed on Bank Holidays</p>
+              <p className="text-sm">Attendance by appointment only</p>
+              <p className="text-sm">Closed between Christmas and New Year</p>
+            </div>
           </address>
         </div>
       </section>

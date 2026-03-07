@@ -66,6 +66,12 @@ export default function RootLayout({
                     Services
                   </Link>
                   <Link
+                    href="/what-is-biomechanics"
+                    className="rounded-none px-3 py-2 text-sm font-medium text-[#2c5a5d] transition-colors hover:bg-[#e4f0ee]"
+                  >
+                    Biomechanics
+                  </Link>
+                  <Link
                     href="/#contact"
                     className="rounded-none bg-[#2f7b79] px-4 py-2 text-sm font-semibold text-[#f8fffe] transition-colors hover:bg-[#266866]"
                   >
