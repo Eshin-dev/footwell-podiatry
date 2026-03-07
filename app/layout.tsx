@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import BookingModalProvider from "./booking-modal-provider";
 import SiteFooter from "./site-footer";
@@ -26,6 +27,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <html lang="en">
       <body
@@ -38,8 +41,16 @@ export default function RootLayout({
                 className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-3"
                 aria-label="Main navigation"
               >
-                <Link href="/" className="text-base font-semibold text-[#12363a] md:text-lg">
-                  Footwell Podiatry
+                <Link href="/" aria-label="Footwell Podiatry home">
+                  <Image
+                    src={`${basePath}/footwell_logo_nav.webp`}
+                    alt="Footwell Podiatry"
+                    width={500}
+                    height={120}
+                    className="h-auto w-42.5 md:w-57.5"
+                    sizes="(max-width: 768px) 170px, 230px"
+                    priority
+                  />
                 </Link>
                 <div className="flex items-center gap-2 md:gap-3">
                   <Link

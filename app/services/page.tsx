@@ -1,3 +1,5 @@
+import BookAppointmentButton from "../book-appointment-button";
+
 const services = [
     {
         name: "Routine Podiatry/Chiropody Appointment",
@@ -98,7 +100,7 @@ export default function ServicesPage() {
                                 </h2>
                                 <p className="mt-2 text-sm text-[#39585c]">{service.duration}</p>
                             </div>
-                            <p className="rounded-full bg-[#e8f4f2] px-4 py-2 text-lg font-semibold text-[#175d5d]">
+                            <p className="rounded-none bg-[#e8f4f2] px-4 py-2 text-lg font-semibold text-[#175d5d]">
                                 {service.price}
                             </p>
                         </div>
@@ -111,6 +113,10 @@ export default function ServicesPage() {
                                 </li>
                             ))}
                         </ul>
+
+                        <div className="mt-6">
+                            <BookAppointmentButton size="small" />
+                        </div>
                     </article>
                 ))}
             </section>

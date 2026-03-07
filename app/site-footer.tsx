@@ -105,7 +105,7 @@ export default function SiteFooter() {
                             <p>
                                 Email: <a className="text-[#175d5d] hover:text-[#12363a]" href="mailto:info@footwell-podiatry.co.uk">info@footwell-podiatry.co.uk</a>
                             </p>
-                            <p>Broughton, Preston</p>
+                            <p>13 Northway, Broughton, Preston</p>
                         </div>
                     </section>
                 </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CLINIKO_BOOKING_URL } from "./booking";
+import BookAppointmentButton from "./book-appointment-button";
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -37,13 +37,7 @@ export default function Home() {
               foot health with evidence-based podiatry care.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <a
-                className="inline-flex min-h-11 items-center justify-center rounded-none bg-[#2f7b79] px-4 py-2 font-semibold text-[#f8fffe] transition-colors hover:bg-[#266866]"
-                href={CLINIKO_BOOKING_URL}
-                data-book-appointment="true"
-              >
-                Book an appointment
-              </a>
+              <BookAppointmentButton />
               <Link
                 className="inline-flex min-h-11 items-center justify-center rounded-none border border-[#c6dedb] bg-[#f4faf9] px-4 py-2 font-semibold transition-colors hover:border-[#2f7b79]"
                 href="/services"
@@ -216,7 +210,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="pb-24 pt-16 md:pt-20" aria-labelledby="contact-title">
-        <div className="mx-auto grid w-full max-w-6xl gap-5 border border-[#c6dedb] bg-[linear-gradient(150deg,#ffffff_0%,#f4fcfb_70%,#e6f3f1_100%)] p-8 shadow-[0_10px_30px_rgba(20,63,66,0.08)] md:grid-cols-[1.2fr_1fr]">
+        <div className="mx-auto grid w-full max-w-6xl gap-5 border border-[#c6dedb] bg-[linear-gradient(150deg,#ffffff_0%,#f4fcfb_70%,#e6f3f1_100%)] p-8 shadow-[0_10px_30px_rgba(20,63,66,0.08)] md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]">
               Contact
@@ -225,28 +219,29 @@ export default function Home() {
               Ready to feel comfortable on your feet again?
             </h2>
             <p className="mt-3 text-[#39585c]">
-              Call us to book, or send an email and our team will get back to you.
+              Call to book, or book online at a time that suits you.
             </p>
+            <BookAppointmentButton className="mt-5" />
           </div>
           <address className="grid gap-3 not-italic text-[#39585c]">
             <p>
               <strong className="text-[#12363a]">Phone:</strong>{" "}
-              <a className="text-[#0f5f5e] underline underline-offset-2" href="tel:+441234567890">
-                01234 567890
+              <a className="text-[#0f5f5e] underline underline-offset-2" href="tel:+447552514505">
+                07552 514 505
               </a>
             </p>
             <p>
               <strong className="text-[#12363a]">Email:</strong>{" "}
               <a
                 className="text-[#0f5f5e] underline underline-offset-2"
-                href="mailto:hello@footwellpodiatry.co.uk"
+                href="mailto:info@footwell-podiatry.co.uk"
               >
-                hello@footwellpodiatry.co.uk
+                info@footwell-podiatry.co.uk
               </a>
             </p>
             <p>
-              <strong className="text-[#12363a]">Clinic:</strong> 14 Well Lane,
-              Yourtown
+              <strong className="text-[#12363a]">Clinic:</strong> 13 Northway,
+              Broughton, Preston
             </p>
           </address>
         </div>
