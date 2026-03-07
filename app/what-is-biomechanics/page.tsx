@@ -1,6 +1,59 @@
+import type { Metadata } from "next";
 import BookAppointmentButton from "../book-appointment-button";
+import { SITE_NAME, absoluteUrl } from "../seo";
+
+export const metadata: Metadata = {
+    title: "What is Biomechanics?",
+    description:
+        "Learn who may need a biomechanics assessment, what it includes, and how orthotics can help with foot, ankle, and lower-limb pain.",
+    alternates: {
+        canonical: "/what-is-biomechanics",
+    },
+    openGraph: {
+        title: `What is Biomechanics? | ${SITE_NAME}`,
+        description:
+            "A clear guide to biomechanics assessments, orthotics, and treatment options from Footwell Podiatry.",
+        url: absoluteUrl("/what-is-biomechanics"),
+    },
+};
 
 export default function WhatIsBiomechanicsPage() {
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: absoluteUrl("/"),
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "What is Biomechanics?",
+                item: absoluteUrl("/what-is-biomechanics"),
+            },
+        ],
+    };
+    const articleJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        name: "What is Biomechanics?",
+        headline: "What is Biomechanics?",
+        description:
+            "Who may need a biomechanics assessment, what the assessment includes, and how orthotics may help foot and ankle pain.",
+        url: absoluteUrl("/what-is-biomechanics"),
+        about: {
+            "@type": "MedicalCondition",
+            name: "Foot and ankle pain",
+        },
+        publisher: {
+            "@type": "MedicalBusiness",
+            name: SITE_NAME,
+        },
+    };
+
     return (
         <main className="bg-[radial-gradient(circle_at_12%_16%,#e6f2f0_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#f4f8f8_0%,#f8fbfb_46%,#eaf3f3_100%)] pb-20 text-[#12363a]">
             <section className="mx-auto w-full max-w-4xl px-6 pb-8 pt-16 md:pt-20" aria-labelledby="biomechanics-title">
@@ -206,6 +259,14 @@ export default function WhatIsBiomechanicsPage() {
                     </div>
                 </article>
             </section>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+            />
         </main>
     );
 }

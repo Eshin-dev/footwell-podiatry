@@ -3,6 +3,16 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import BookingModalProvider from "./booking-modal-provider";
+import {
+  BUSINESS_ADDRESS,
+  BUSINESS_EMAIL,
+  BUSINESS_OPENING_HOURS,
+  BUSINESS_PHONE_DISPLAY,
+  BUSINESS_PHONE_E164,
+  SITE_NAME,
+  SITE_URL_WITH_BASE_PATH,
+  absoluteUrl,
+} from "./seo";
 import SiteFooter from "./site-footer";
 import "./globals.css";
 
@@ -17,9 +27,56 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Footwell Podiatry | Professional Foot Care",
+  metadataBase: new URL(`${SITE_URL_WITH_BASE_PATH}/`),
+  title: {
+    default: "Footwell Podiatry | Podiatrist in Broughton, Preston",
+    template: `%s | ${SITE_NAME}`,
+  },
   description:
-    "Footwell Podiatry offers patient-focused podiatry care with clear advice, evidence-based treatment, and a welcoming clinical approach.",
+    "Footwell Podiatry provides patient-focused podiatry care in Broughton, Preston, including routine foot care, biomechanics assessments, and diabetic foot checks.",
+  keywords: [
+    "podiatrist Broughton",
+    "podiatrist Preston",
+    "foot care Preston",
+    "biomechanics assessment",
+    "diabetic foot care",
+    "Footwell Podiatry",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: absoluteUrl("/"),
+    siteName: SITE_NAME,
+    title: "Footwell Podiatry | Podiatrist in Broughton, Preston",
+    description:
+      "Professional, patient-focused podiatry care in Broughton, Preston. Book routine appointments, biomechanics assessments, and diabetic foot checks.",
+    images: [
+      {
+        url: absoluteUrl("/footwell_logo.webp"),
+        width: 1200,
+        height: 630,
+        alt: "Footwell Podiatry",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Footwell Podiatry | Podiatrist in Broughton, Preston",
+    description:
+      "Professional, patient-focused podiatry care in Broughton, Preston.",
+    images: [absoluteUrl("/footwell_logo.webp")],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.webp", type: "image/webp" },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +85,43 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const webSiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: absoluteUrl("/"),
+  };
+  const medicalBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    name: SITE_NAME,
+    image: absoluteUrl("/footwell_logo.webp"),
+    url: absoluteUrl("/"),
+    telephone: BUSINESS_PHONE_E164,
+    email: BUSINESS_EMAIL,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BUSINESS_ADDRESS.streetAddress,
+      addressLocality: BUSINESS_ADDRESS.addressLocality,
+      postalCode: BUSINESS_ADDRESS.postalCode,
+      addressCountry: BUSINESS_ADDRESS.addressCountry,
+    },
+    openingHoursSpecification: BUSINESS_OPENING_HOURS.map((hours) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: hours.dayOfWeek,
+      opens: hours.opens,
+      closes: hours.closes,
+    })),
+    areaServed: "Preston",
+    priceRange: "GBP",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: BUSINESS_PHONE_E164,
+      contactType: "customer service",
+      areaServed: "GB",
+      availableLanguage: "English",
+    },
+  };
 
   return (
     <html lang="en">
@@ -83,6 +177,14 @@ export default function RootLayout({
             <div className="flex-1">{children}</div>
             <SiteFooter />
           </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusinessJsonLd) }}
+          />
         </BookingModalProvider>
       </body>
     </html>

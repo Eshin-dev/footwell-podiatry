@@ -1,6 +1,31 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BookAppointmentButton from "./book-appointment-button";
+import { absoluteUrl } from "./seo";
+
+export const metadata: Metadata = {
+  title: "Podiatrist in Broughton, Preston",
+  description:
+    "Footwell Podiatry offers expert foot care, biomechanics assessments, diabetic foot checks, and patient-focused treatment in Broughton, Preston.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Footwell Podiatry | Podiatrist in Broughton, Preston",
+    description:
+      "Expert podiatry care in Broughton, Preston with a calm, personal approach.",
+    url: absoluteUrl("/"),
+    images: [
+      {
+        url: absoluteUrl("/footwell_logo.webp"),
+        width: 1200,
+        height: 630,
+        alt: "Footwell Podiatry",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -73,6 +98,12 @@ export default function Home() {
                 Gait and movement assessments to support heel pain, forefoot pain,
                 and recurring strain from everyday activity.
               </p>
+              <Link
+                href="/what-is-biomechanics"
+                className="mt-3 inline-block text-sm font-semibold text-[#175d5d] underline underline-offset-2"
+              >
+                Learn about biomechanics
+              </Link>
             </article>
             <article className="border border-[#c6dedb] bg-white p-5 shadow-[0_7px_18px_rgba(21,74,77,0.05)]">
               <h3 className="mb-2 text-lg font-semibold">Diabetic Foot Checks</h3>
@@ -80,6 +111,12 @@ export default function Home() {
                 Preventive reviews and risk monitoring to help reduce complications
                 and keep you safely active.
               </p>
+              <Link
+                href="/services"
+                className="mt-3 inline-block text-sm font-semibold text-[#175d5d] underline underline-offset-2"
+              >
+                View all services
+              </Link>
             </article>
           </div>
         </div>

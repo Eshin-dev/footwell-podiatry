@@ -38,15 +38,16 @@ const aboutLinks = ["About Us", "Meet The Team", "New Patients", "Prices", "Blog
 
 export default function SiteFooter() {
     const currentYear = new Date().getFullYear();
+    const sectionId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
     return (
         <footer className="border-t border-[#c6dedb] bg-[#eaf3f3] text-[#2b5154]">
             <div className="mx-auto w-full max-w-6xl px-6 py-14">
                 <div className="mx-auto grid w-full max-w-5xl gap-10 md:grid-cols-2 lg:grid-cols-4">
                     {conditionColumns.map((column) => (
-                        <section key={column.title} aria-labelledby={column.title}>
+                        <section key={column.title} aria-labelledby={sectionId(column.title)}>
                             <h2
-                                id={column.title}
+                                id={sectionId(column.title)}
                                 className="mb-5 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]"
                             >
                                 {column.title}
@@ -73,7 +74,10 @@ export default function SiteFooter() {
                         <ul className="grid gap-2 text-sm leading-relaxed">
                             {serviceLinks.map((link) => (
                                 <li key={link}>
-                                    <Link href="/services" className="transition-colors hover:text-[#12363a]">
+                                    <Link
+                                        href={link === "Custom Orthotics" ? "/what-is-biomechanics" : "/services"}
+                                        className="transition-colors hover:text-[#12363a]"
+                                    >
                                         {link}
                                     </Link>
                                 </li>

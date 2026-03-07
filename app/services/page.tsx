@@ -1,4 +1,21 @@
+import type { Metadata } from "next";
 import BookAppointmentButton from "../book-appointment-button";
+import { SITE_NAME, absoluteUrl } from "../seo";
+
+export const metadata: Metadata = {
+    title: "Podiatry Services and Prices",
+    description:
+        "View Footwell Podiatry service details and prices, including routine podiatry care, biomechanics assessments, verruca treatment, and home visits.",
+    alternates: {
+        canonical: "/services",
+    },
+    openGraph: {
+        title: `Services and Prices | ${SITE_NAME}`,
+        description:
+            "Clear service options and pricing for podiatry appointments in Broughton, Preston.",
+        url: absoluteUrl("/services"),
+    },
+};
 
 const services = [
     {
@@ -65,6 +82,41 @@ const services = [
 
 export default function ServicesPage() {
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: absoluteUrl("/"),
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: absoluteUrl("/services"),
+            },
+        ],
+    };
+    const serviceListJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Footwell Podiatry Services",
+        itemListElement: services.map((service, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+                "@type": "Service",
+                name: service.name,
+                provider: {
+                    "@type": "MedicalBusiness",
+                    name: SITE_NAME,
+                },
+            },
+        })),
+    };
 
     return (
         <main className="bg-[radial-gradient(circle_at_12%_16%,#e6f2f0_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#f4f8f8_0%,#f8fbfb_46%,#eaf3f3_100%)] pb-20 text-[#12363a]">
@@ -120,6 +172,14 @@ export default function ServicesPage() {
                     </article>
                 ))}
             </section>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceListJsonLd) }}
+            />
         </main>
     );
 }
