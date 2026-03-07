@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CLINIKO_BOOKING_URL } from "./booking";
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -16,12 +17,12 @@ export default function Home() {
           <div className="w-full max-w-5xl text-center">
             <div className="flex justify-center">
               <Image
-                className="mb-6 block h-auto w-[min(560px,44vw)] max-w-full"
+                className="mb-6 block h-auto w-[min(560px,68vw)] max-w-full md:w-[min(560px,44vw)]"
                 src={`${basePath}/footwell_logo.webp`}
                 alt="Footwell Podiatry logo"
                 width={560}
                 height={179}
-                sizes="(max-width: 900px) 44vw, 560px"
+                sizes="(max-width: 768px) 68vw, (max-width: 900px) 44vw, 560px"
                 priority
               />
             </div>
@@ -38,7 +39,8 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a
                 className="inline-flex min-h-11 items-center justify-center rounded-none bg-[#2f7b79] px-4 py-2 font-semibold text-[#f8fffe] transition-colors hover:bg-[#266866]"
-                href="#contact"
+                href={CLINIKO_BOOKING_URL}
+                data-book-appointment="true"
               >
                 Book an appointment
               </a>
@@ -93,7 +95,7 @@ export default function Home() {
         className="border-y border-[#d7e8e6] bg-[#eef7f5] py-16 md:py-20"
         aria-labelledby="approach-title"
       >
-        <div className="mx-auto grid w-full max-w-6xl gap-6 px-6 md:grid-cols-2">
+        <div className="mx-auto grid w-full max-w-6xl gap-6 px-6 md:grid-cols-2 md:items-center">
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]">
               Our Approach
