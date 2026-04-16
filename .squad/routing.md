@@ -5,13 +5,14 @@ How to decide who handles what.
 ## Routing Table
 
 | Work Type | Route To | Examples |
-|-----------|----------|----------|
-| {domain 1} | {Name} | {example tasks} |
-| {domain 2} | {Name} | {example tasks} |
-| {domain 3} | {Name} | {example tasks} |
-| Code review | {Name} | Review PRs, check quality, suggest improvements |
-| Testing | {Name} | Write tests, find edge cases, verify fixes |
-| Scope & priorities | {Name} | What to build next, trade-offs, decisions |
+|-----------|----------|---------|
+| Architecture & technical decisions | Ross | Next.js config, static export constraints, build setup, code review |
+| React components & UI | Rachel | Page layouts, Tailwind styling, responsive design, images, accessibility markup |
+| Testing & QA | Monica | Accessibility audit, layout verification, edge cases, deployment checks |
+| Content & copy | Chandler | Page text, headings, CTAs, SEO metadata, structured data, sitemap |
+| CI/CD & deployment | Joey | GitHub Actions workflows, GitHub Pages config, environment variables, build failures |
+| Code review | Ross | Review PRs, check quality, enforce static-export and accessibility requirements |
+| Issue triage | Ross | Analyze `squad`-labelled issues, assign `squad:{member}` sub-labels |
 | Session logging | Scribe | Automatic — never needs routing |
 
 ## Issue Routing

@@ -1,0 +1,23 @@
+{
+  "universe_usage_history": [
+    {
+      "universe": "Friends",
+      "assignment_id": "footwell-podiatry-2026-04-16",
+      "used_at": "2026-04-16T00:00:00Z"
+    }
+  ],
+  "assignment_cast_snapshots": {
+    "footwell-podiatry-2026-04-16": {
+      "universe": "Friends",
+      "agents": {
+        "tech-lead": "Ross",
+        "frontend-dev": "Rachel",
+        "tester-qa": "Monica",
+        "content-seo": "Chandler",
+        "devops": "Joey",
+        "scribe": "Scribe"
+      },
+      "created_at": "2026-04-16T00:00:00Z"
+    }
+  }
+}

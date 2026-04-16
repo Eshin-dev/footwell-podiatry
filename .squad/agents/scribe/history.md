@@ -1,16 +1,10 @@
 # Project Context
 
-- **Project:** footwell-podiatry
+- **Owner:** sddev12
+- **Project:** Footwell Podiatry — professional podiatry marketing site
+- **Stack:** Next.js 16 (static export), React 19, TypeScript, Tailwind CSS v4, GitHub Pages via GitHub Actions
 - **Created:** 2026-04-16
-
-## Core Context
-
-Agent Scribe initialized and ready for work.
-
-## Recent Updates
-
-📌 Team initialized on 2026-04-16
 
 ## Learnings
 
-Initial setup complete.
+<!-- Append new learnings below. Each entry is something lasting about the project. -->

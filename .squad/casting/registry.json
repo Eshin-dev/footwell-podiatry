@@ -1,0 +1,46 @@
+{
+  "agents": {
+    "tech-lead": {
+      "persistent_name": "Ross",
+      "universe": "Friends",
+      "created_at": "2026-04-16T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "frontend-dev": {
+      "persistent_name": "Rachel",
+      "universe": "Friends",
+      "created_at": "2026-04-16T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "tester-qa": {
+      "persistent_name": "Monica",
+      "universe": "Friends",
+      "created_at": "2026-04-16T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "content-seo": {
+      "persistent_name": "Chandler",
+      "universe": "Friends",
+      "created_at": "2026-04-16T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "devops": {
+      "persistent_name": "Joey",
+      "universe": "Friends",
+      "created_at": "2026-04-16T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "scribe": {
+      "persistent_name": "Scribe",
+      "universe": "system",
+      "created_at": "2026-04-16T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    }
+  }
+}
