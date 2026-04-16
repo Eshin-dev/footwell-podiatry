@@ -14,7 +14,7 @@ export default function GoogleReviewsSection() {
           </h2>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid items-stretch gap-4 md:grid-cols-2 lg:grid-cols-4">
           {reviews.map((review) => (
             <ReviewCard key={review.author} review={review} />
           ))}

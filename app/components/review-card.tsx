@@ -13,7 +13,7 @@ export default function ReviewCard({ review }: { review: Review }) {
   const initials = getInitials(review.author);
 
   return (
-    <article className="flex flex-col border border-[#c6dedb] bg-white p-5 shadow-[0_7px_18px_rgba(21,74,77,0.05)]">
+    <article className="flex flex-col h-full border border-[#c6dedb] bg-white p-5 shadow-[0_7px_18px_rgba(21,74,77,0.05)]">
       <div
         className="mb-3 text-amber-400"
         aria-label="5 out of 5 stars"
@@ -36,7 +36,7 @@ export default function ReviewCard({ review }: { review: Review }) {
         </div>
       </div>
 
-      <p className="line-clamp-5 grow text-sm leading-relaxed text-[#39585c]">
+      <p className="grow text-sm leading-relaxed text-[#39585c]">
         {review.text}
       </p>
 

@@ -36,3 +36,13 @@
 - **CTA link:** Ghost button style (`rounded-none border border-[#c6dedb] bg-[#f4faf9]`), matching the secondary "View services" button in the hero.
 - **Section background:** transparent (inherits page gradient), `py-16 md:py-20` matching other sections.
 - **Static export compatible** — no `use client`, no `async/await`, no external imports.
+
+### 2026-04-17 — Fix review card text cutoff (Issue #4, PR #5)
+
+**Problem:** `line-clamp-5` on the review text paragraph was truncating longer reviews.
+
+**Fix applied:**
+- `app/components/review-card.tsx`: removed `line-clamp-5` from the `<p>`, added `h-full` to the outer `<article>` (already had `flex flex-col`; `grow` was already on `<p>`).
+- `app/components/google-reviews-section.tsx`: added `items-stretch` to the grid `<div>` so all cards in a row reach equal height.
+
+**Result:** All review text is fully visible; equal-height cards are maintained via CSS grid stretch + flex column layout.
