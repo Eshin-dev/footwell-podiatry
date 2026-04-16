@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BookAppointmentButton from "./book-appointment-button";
+import GoogleReviewsSection from "./components/google-reviews-section";
 import { absoluteUrl } from "./seo";
 
 export const metadata: Metadata = {
@@ -305,6 +306,8 @@ export default function Home() {
           </address>
         </div>
       </section>
+
+      <GoogleReviewsSection />
     </main>
   );
 }
