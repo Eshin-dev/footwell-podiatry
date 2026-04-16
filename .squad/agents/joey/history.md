@@ -25,3 +25,16 @@
 - ESLint was picking up `.github/workflows/*.yml` and `.squad/**` files, causing the lint CI step to fail
 - Fix: added `".github/**"` and `".squad/**"` to the `globalIgnores()` array
 - Rule: ESLint scope in this project is Next.js application code only — non-app directories must be explicitly ignored
+
+### 2026-04-17 — Issue #6: GitHub Actions Node.js 20 deprecation warnings
+
+- All workflows were using action versions that run on Node.js 20 (deprecated from June 2026)
+- Checked latest releases via `gh api repos/actions/{name}/releases/latest`
+- Updated versions across `deploy.yml` and all four squad workflows:
+  - `actions/checkout`: v4 → **v6** (latest: v6.0.2)
+  - `actions/configure-pages`: v5 → **v6** (latest: v6.0.0)
+  - `actions/setup-node`: v4 → **v6** (latest: v6.3.0)
+  - `actions/upload-pages-artifact`: v3 → **v5** (latest: v5.0.0)
+  - `actions/deploy-pages`: v4 → **v5** (latest: v5.0.0)
+- Also bumped `node-version: 20` → `node-version: 22` (Node 22 is current LTS; Node 20 EOL approaching)
+- Pattern: always check actual latest via `gh api` before assuming fallback versions — major versions jumped significantly
