@@ -6,32 +6,84 @@ import GoogleReviewsSection from "./components/google-reviews-section";
 import { absoluteUrl } from "./seo";
 
 export const metadata: Metadata = {
-  title: "Podiatrist in Broughton, Preston",
+  title: "Podiatrist in Preston & Lancashire | Footwell Podiatry",
   description:
-    "Footwell Podiatry offers expert foot care, biomechanics assessments, diabetic foot checks, and patient-focused treatment in Broughton, Preston.",
+    "Footwell Podiatry — HCPC registered podiatrist in Broughton, Preston, Lancashire. Routine foot care, ingrown toenails, verruca treatment, biomechanics assessments, and diabetic foot checks. Serving Preston and the Ribble Valley.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Footwell Podiatry | Podiatrist in Broughton, Preston",
+    title: "Podiatrist in Preston & Lancashire | Footwell Podiatry",
     description:
-      "Expert podiatry care in Broughton, Preston with a calm, personal approach.",
+      "HCPC registered podiatrist in Broughton, Preston, Lancashire. Expert foot care with a calm, personal approach. Serving Preston and the Ribble Valley.",
     url: absoluteUrl("/"),
     images: [
       {
         url: absoluteUrl("/footwell_logo.webp"),
         width: 1200,
         height: 630,
-        alt: "Footwell Podiatry",
+        alt: "Footwell Podiatry — Podiatrist in Preston, Lancashire",
       },
     ],
   },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What does a podiatrist do?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A podiatrist is a healthcare professional who diagnoses and treats conditions affecting the feet and lower limbs. This includes treating corns, calluses, ingrown toenails, verrucas, fungal nail infections, foot pain, heel pain, and diabetic foot problems. They can also carry out biomechanics assessments and prescribe custom orthotics.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does a podiatrist appointment cost in Preston?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "At Footwell Podiatry in Broughton, Preston, a routine podiatry appointment costs £40. A biomechanical assessment costs £75. Prices for other treatments are listed on our services page.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need a GP referral to see a podiatrist in Preston?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No, you do not need a GP referral to book a private podiatry appointment at Footwell Podiatry. You can book online directly at a time that suits you.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between a podiatrist and a chiropodist?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Podiatrist and chiropodist are two terms for the same profession. In the UK, the title 'podiatrist' is now preferred and all registered practitioners are listed with the HCPC. At Footwell Podiatry, Rachel Rayner is HCPC registered.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where is Footwell Podiatry located?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Footwell Podiatry is located at 13 Northway, Broughton, Preston, PR3 5JX. We serve patients from Preston, Broughton, Fulwood, Longridge, Garstang, Kirkham, and across Lancashire and the Ribble Valley.",
+      },
+    },
+  ],
 };
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
     <main className="bg-[#fafaf8] text-[#2c1a0f]">
       <section
         className="relative w-full overflow-hidden bg-cover bg-center"
@@ -307,6 +359,38 @@ export default function Home() {
       </section>
 
       <GoogleReviewsSection />
+
+      <section className="py-16 md:py-20" aria-labelledby="faq-title">
+        <div className="mx-auto w-full max-w-3xl px-6">
+          <div className="mb-10">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]">Common Questions</p>
+            <h2 id="faq-title" className="text-3xl font-semibold leading-tight md:text-4xl">Frequently asked questions</h2>
+          </div>
+          <dl className="divide-y divide-[#d4bfa8]">
+            <div className="py-5">
+              <dt className="font-semibold text-[#2c1a0f]">What does a podiatrist do?</dt>
+              <dd className="mt-2 text-[#5c4033] leading-relaxed">A podiatrist diagnoses and treats conditions affecting the feet and lower limbs — including corns, calluses, ingrown toenails, verrucas, fungal nail infections, heel pain, and diabetic foot problems. We also carry out biomechanics assessments and prescribe custom orthotics.</dd>
+            </div>
+            <div className="py-5">
+              <dt className="font-semibold text-[#2c1a0f]">How much does a podiatrist cost in Preston?</dt>
+              <dd className="mt-2 text-[#5c4033] leading-relaxed">A routine podiatry appointment at Footwell Podiatry in Broughton, Preston costs £40. A biomechanical assessment is £75. Full pricing is available on our <Link href="/services" className="text-[#7a5230] underline underline-offset-2">services page</Link>.</dd>
+            </div>
+            <div className="py-5">
+              <dt className="font-semibold text-[#2c1a0f]">Do I need a GP referral to see a podiatrist?</dt>
+              <dd className="mt-2 text-[#5c4033] leading-relaxed">No. You can book a private podiatry appointment directly — no GP referral needed. Simply book online or call us.</dd>
+            </div>
+            <div className="py-5">
+              <dt className="font-semibold text-[#2c1a0f]">What is the difference between a podiatrist and a chiropodist?</dt>
+              <dd className="mt-2 text-[#5c4033] leading-relaxed">&ldquo;Podiatrist&rdquo; and &ldquo;chiropodist&rdquo; refer to the same profession. In the UK, &ldquo;podiatrist&rdquo; is now the preferred title. All registered practitioners, including Rachel at Footwell Podiatry, are listed with the HCPC.</dd>
+            </div>
+            <div className="py-5">
+              <dt className="font-semibold text-[#2c1a0f]">Where is Footwell Podiatry located?</dt>
+              <dd className="mt-2 text-[#5c4033] leading-relaxed">We are based at 13 Northway, Broughton, Preston, PR3 5JX — with easy parking right outside. We see patients from Preston, Broughton, Fulwood, Longridge, Garstang, Kirkham, and across Lancashire and the Ribble Valley.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
     </main>
+    </>
   );
 }

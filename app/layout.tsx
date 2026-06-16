@@ -123,6 +123,7 @@ export default function RootLayout({
       "Preston",
       "Lancashire",
       "Broughton",
+      "Ribble Valley",
       "Fulwood",
       "Longridge",
       "Garstang",
