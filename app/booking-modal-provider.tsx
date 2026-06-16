@@ -82,16 +82,16 @@ export default function BookingModalProvider({
                     onClick={() => setIsOpen(false)}
                 >
                     <div
-                        className="w-full max-w-5xl overflow-hidden border border-[#d4bfa8] bg-[#fdfaf6] shadow-[0_12px_40px_rgba(74,46,26,0.25)]"
+                        className="w-full max-w-5xl overflow-hidden border border-[#d4bfa8] bg-white shadow-[0_12px_40px_rgba(74,46,26,0.25)]"
                         onClick={(event) => event.stopPropagation()}
                     >
-                        <div className="flex items-center justify-between border-b border-[#d4bfa8] bg-[#f7ede0] px-4 py-3 md:px-6">
+                        <div className="flex items-center justify-between border-b border-[#d4bfa8] bg-[#fafaf8] px-4 py-3 md:px-6">
                             <h2 id={titleId} className="text-lg font-semibold text-[#2c1a0f] md:text-xl">
                                 Book an appointment
                             </h2>
                             <button
                                 type="button"
-                                className="rounded-none border border-[#c9a98a] bg-white px-3 py-1 text-sm font-medium text-[#4a2e1a] transition-colors hover:bg-[#f5e8d8]"
+                                className="rounded-none border border-[#c9a98a] bg-white px-3 py-1 text-sm font-medium text-[#4a2e1a] transition-colors hover:bg-[#fafaf8]"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Close

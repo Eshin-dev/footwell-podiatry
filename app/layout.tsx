@@ -129,7 +129,7 @@ export default function RootLayout({
       >
         <BookingModalProvider>
           <div className="flex min-h-screen flex-col">
-            <header className="sticky top-0 z-50 border-b border-[#d4bfa8] bg-[#faf6f1]/90 backdrop-blur">
+            <header className="sticky top-0 z-50 border-b border-[#d4bfa8] bg-white/90 backdrop-blur">
               <nav
                 className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-3"
                 aria-label="Main navigation"
@@ -148,19 +148,19 @@ export default function RootLayout({
                 <div className="flex items-center gap-2 md:gap-3">
                   <Link
                     href="/"
-                    className="rounded-none px-3 py-2 text-sm font-medium text-[#5c3d20] transition-colors hover:bg-[#f5e6d6]"
+                    className="rounded-none px-3 py-2 text-sm font-medium text-[#5c3d20] transition-colors hover:bg-[#fafaf8]"
                   >
                     Home
                   </Link>
                   <Link
                     href="/services"
-                    className="rounded-none px-3 py-2 text-sm font-medium text-[#5c3d20] transition-colors hover:bg-[#f5e6d6]"
+                    className="rounded-none px-3 py-2 text-sm font-medium text-[#5c3d20] transition-colors hover:bg-[#fafaf8]"
                   >
                     Services
                   </Link>
                   <Link
                     href="/what-is-biomechanics"
-                    className="rounded-none px-3 py-2 text-sm font-medium text-[#5c3d20] transition-colors hover:bg-[#f5e6d6]"
+                    className="rounded-none px-3 py-2 text-sm font-medium text-[#5c3d20] transition-colors hover:bg-[#fafaf8]"
                   >
                     Biomechanics
                   </Link>

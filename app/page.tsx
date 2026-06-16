@@ -32,13 +32,13 @@ export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   return (
-    <main className="bg-[radial-gradient(circle_at_12%_16%,#f0dfc8_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#faf6f1_0%,#fdfaf6_46%,#f5e8d8_100%)] text-[#2c1a0f]">
+    <main className="bg-[#fafaf8] text-[#2c1a0f]">
       <section
         className="relative w-full overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url('${basePath}/main-background-foot.webp')` }}
         aria-labelledby="hero-title"
       >
-        <div className="absolute inset-0 bg-[#faf6f1]/85" aria-hidden="true" />
+        <div className="absolute inset-0 bg-white/85" aria-hidden="true" />
         <div className="relative mx-auto flex w-full max-w-6xl justify-center px-6 pb-16 pt-24 md:pb-20 md:pt-28">
           <div className="w-full max-w-5xl text-center">
             <div className="flex justify-center">
@@ -65,7 +65,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <BookAppointmentButton />
               <Link
-                className="inline-flex min-h-11 items-center justify-center rounded-none border border-[#d4bfa8] bg-[#faf1e6] px-4 py-2 font-semibold transition-colors hover:border-[#7a5230]"
+                className="inline-flex min-h-11 items-center justify-center rounded-none border border-[#d4bfa8] bg-white px-4 py-2 font-semibold transition-colors hover:border-[#7a5230]"
                 href="/services"
               >
                 View services
@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       <section
-        className="border-y border-[#dfc8aa] bg-[#f7ede0] py-16 md:py-20"
+        className="border-y border-[#dfc8aa] bg-[#fafaf8] py-16 md:py-20"
         aria-labelledby="approach-title"
       >
         <div className="mx-auto grid w-full max-w-6xl gap-6 px-6 md:grid-cols-2 md:items-center">
@@ -227,17 +227,17 @@ export default function Home() {
             </h2>
           </div>
           <ol className="grid list-none gap-4 p-0 md:grid-cols-3">
-            <li className="border border-[#d4bfa8] bg-[#faf1e6] p-4">
+            <li className="border border-[#d4bfa8] bg-white p-4">
               <h3 className="mb-1 text-lg font-semibold">1. Initial Assessment</h3>
               <p className="text-[#5c4033]">We discuss your symptoms, history, and goals.</p>
             </li>
-            <li className="border border-[#d4bfa8] bg-[#faf1e6] p-4">
+            <li className="border border-[#d4bfa8] bg-white p-4">
               <h3 className="mb-1 text-lg font-semibold">2. Clinical Examination</h3>
               <p className="text-[#5c4033]">
                 We examine foot health, posture, and movement where relevant.
               </p>
             </li>
-            <li className="border border-[#d4bfa8] bg-[#faf1e6] p-4">
+            <li className="border border-[#d4bfa8] bg-white p-4">
               <h3 className="mb-1 text-lg font-semibold">3. Personal Care Plan</h3>
               <p className="text-[#5c4033]">
                 You leave with a clear treatment plan and practical next steps.
@@ -248,7 +248,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="pb-24 pt-16 md:pt-20" aria-labelledby="contact-title">
-        <div className="mx-auto grid w-full max-w-6xl gap-5 border border-[#d4bfa8] bg-[linear-gradient(150deg,#ffffff_0%,#fdf9f4_70%,#f0e2ce_100%)] p-8 shadow-[0_10px_30px_rgba(74,46,26,0.08)] md:grid-cols-[1.2fr_1fr] md:items-center">
+        <div className="mx-auto grid w-full max-w-6xl gap-5 border border-[#d4bfa8] bg-white p-8 shadow-[0_10px_30px_rgba(74,46,26,0.08)] md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]">
               Contact

@@ -25,7 +25,7 @@ export default function GoogleReviewsSection() {
             href="https://www.google.com/search?q=Footwell+Podiatry,+Broughton+Reviews"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center justify-center rounded-none border border-[#d4bfa8] bg-[#faf1e6] px-4 py-2 font-semibold transition-colors hover:border-[#7a5230]"
+            className="inline-flex min-h-11 items-center justify-center rounded-none border border-[#d4bfa8] bg-white px-4 py-2 font-semibold transition-colors hover:border-[#7a5230]"
           >
             Read all reviews on Google →
           </a>

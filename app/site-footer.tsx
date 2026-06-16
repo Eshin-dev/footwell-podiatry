@@ -41,7 +41,7 @@ export default function SiteFooter() {
     const sectionId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
     return (
-        <footer className="border-t border-[#d4bfa8] bg-[#f5e8d8] text-[#4a2e1a]">
+        <footer className="border-t border-[#d4bfa8] bg-[#fafaf8] text-[#4a2e1a]">
             <div className="mx-auto w-full max-w-6xl px-6 py-14">
                 <div className="mx-auto grid w-full max-w-5xl gap-10 md:grid-cols-2 lg:grid-cols-4">
                     {conditionColumns.map((column) => (
@@ -115,7 +115,7 @@ export default function SiteFooter() {
                 </div>
 
                 <section className="mt-10 border-t border-[#d4bfa8] pt-8" aria-label="Map location">
-                    <div className="overflow-hidden border border-[#d4bfa8] bg-[#faf1e6]">
+                    <div className="overflow-hidden border border-[#d4bfa8] bg-white">
                         <iframe
                             title="Footwell Podiatry location map"
                             src="https://www.google.com/maps?q=Footwell%20Podiatry%2C%20Broughton&output=embed"

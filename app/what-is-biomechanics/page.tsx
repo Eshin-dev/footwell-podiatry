@@ -55,7 +55,7 @@ export default function WhatIsBiomechanicsPage() {
     };
 
     return (
-        <main className="bg-[radial-gradient(circle_at_12%_16%,#f0dfc8_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#faf6f1_0%,#fdfaf6_46%,#f5e8d8_100%)] pb-20 text-[#2c1a0f]">
+        <main className="bg-[#fafaf8] pb-20 text-[#2c1a0f]">
             <section className="mx-auto w-full max-w-4xl px-6 pb-8 pt-16 md:pt-20" aria-labelledby="biomechanics-title">
                 <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]">
                     Foot &amp; Lower Limb Care
@@ -209,7 +209,7 @@ export default function WhatIsBiomechanicsPage() {
                     </p>
                 </article>
 
-                <article className="space-y-4 border border-[#d4bfa8] bg-[linear-gradient(150deg,#ffffff_0%,#fdf9f4_70%,#f0e2ce_100%)] p-6 shadow-[0_10px_30px_rgba(74,46,26,0.08)] md:p-8">
+                <article className="space-y-4 border border-[#d4bfa8] bg-white p-6 shadow-[0_10px_30px_rgba(74,46,26,0.08)] md:p-8">
                     <h2 className="text-2xl font-semibold leading-tight text-[#2c1a0f] md:text-3xl">
                         The Footwell Standard
                     </h2>
