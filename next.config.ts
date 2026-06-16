@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_PAGES === "true";
-const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
-const isUserOrOrgSite = repositoryName.endsWith(".github.io");
-const basePath = isGitHubPages && !isUserOrOrgSite ? `/${repositoryName}` : "";
+// BASE_PATH is set by actions/configure-pages in the workflow.
+// It is "" for custom domain deployments and "/repo-name" for repo sites.
+const basePath = process.env.BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   output: "export",

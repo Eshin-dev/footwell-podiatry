@@ -29,7 +29,10 @@ jobs:
           ref: ${{ github.event.inputs.ref || github.ref }}
 
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v6
+        with:
+          enablement: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -45,6 +48,8 @@ jobs:
 
       - name: Build static site
         run: npm run build
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
