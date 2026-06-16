@@ -21,7 +21,7 @@ const services = [
     {
         name: "Routine Podiatry/Chiropody Appointment",
         duration: "Approximately 30 minutes",
-        price: "GBP 40",
+        price: "£40",
         details: [
             "Routine nail and skin care",
             "Complex nail care",
@@ -39,7 +39,7 @@ const services = [
     {
         name: "Routine Podiatry/Chiropody with Luxury Warm Wax Therapy",
         duration: "1 hour",
-        price: "GBP 65.00",
+        price: "£65",
         details: [
             "General podiatry care followed by warm wax treatment with essential oils",
             "Designed to help with dry skin and aching joints",
@@ -48,7 +48,7 @@ const services = [
     {
         name: "Biomechanical Assessment",
         duration: "1 hour",
-        price: "GBP 75.00",
+        price: "£75",
         details: [
             "Discussion and examination of the existing problem",
             "Biomechanical assessment and tests",
@@ -61,7 +61,7 @@ const services = [
     {
         name: "Verrutop Treatment (Verrucae)",
         duration: "Follow-up treatment course",
-        price: "GBP 55.00",
+        price: "£55",
         details: [
             "Topical nitrizinc complex treatment that desiccates infected tissue",
             "Usually provided every 2 weeks for 6 sessions",
@@ -71,7 +71,7 @@ const services = [
     {
         name: "Home Visits",
         duration: "Subject to availability",
-        price: "GBP 50.00",
+        price: "£50",
         details: [
             "Reserved for patients unable to attend clinic due to health, mobility, or vulnerability reasons",
             "Available for routine podiatry within 3 miles of PR3 5NJ",
