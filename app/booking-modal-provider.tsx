@@ -75,23 +75,23 @@ export default function BookingModalProvider({
             {children}
             {isOpen ? (
                 <div
-                    className="fixed inset-0 z-100 flex items-center justify-center bg-[#12363a]/60 px-4 py-8"
+                    className="fixed inset-0 z-100 flex items-center justify-center bg-[#2c1a0f]/60 px-4 py-8"
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby={titleId}
                     onClick={() => setIsOpen(false)}
                 >
                     <div
-                        className="w-full max-w-5xl overflow-hidden border border-[#c6dedb] bg-[#f8fbfb] shadow-[0_12px_40px_rgba(20,63,66,0.25)]"
+                        className="w-full max-w-5xl overflow-hidden border border-[#d4bfa8] bg-[#fdfaf6] shadow-[0_12px_40px_rgba(74,46,26,0.25)]"
                         onClick={(event) => event.stopPropagation()}
                     >
-                        <div className="flex items-center justify-between border-b border-[#c6dedb] bg-[#eef7f5] px-4 py-3 md:px-6">
-                            <h2 id={titleId} className="text-lg font-semibold text-[#12363a] md:text-xl">
+                        <div className="flex items-center justify-between border-b border-[#d4bfa8] bg-[#f7ede0] px-4 py-3 md:px-6">
+                            <h2 id={titleId} className="text-lg font-semibold text-[#2c1a0f] md:text-xl">
                                 Book an appointment
                             </h2>
                             <button
                                 type="button"
-                                className="rounded-none border border-[#b8d7d3] bg-white px-3 py-1 text-sm font-medium text-[#2b5154] transition-colors hover:bg-[#eaf3f3]"
+                                className="rounded-none border border-[#c9a98a] bg-white px-3 py-1 text-sm font-medium text-[#4a2e1a] transition-colors hover:bg-[#f5e8d8]"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Close

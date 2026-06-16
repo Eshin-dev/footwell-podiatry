@@ -41,21 +41,21 @@ export default function SiteFooter() {
     const sectionId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
     return (
-        <footer className="border-t border-[#c6dedb] bg-[#eaf3f3] text-[#2b5154]">
+        <footer className="border-t border-[#d4bfa8] bg-[#f5e8d8] text-[#4a2e1a]">
             <div className="mx-auto w-full max-w-6xl px-6 py-14">
                 <div className="mx-auto grid w-full max-w-5xl gap-10 md:grid-cols-2 lg:grid-cols-4">
                     {conditionColumns.map((column) => (
                         <section key={column.title} aria-labelledby={sectionId(column.title)}>
                             <h2
                                 id={sectionId(column.title)}
-                                className="mb-5 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]"
+                                className="mb-5 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]"
                             >
                                 {column.title}
                             </h2>
                             <ul className="grid gap-2 text-sm leading-relaxed">
                                 {column.links.map((link) => (
                                     <li key={link}>
-                                        <Link href="/services" className="transition-colors hover:text-[#12363a]">
+                                        <Link href="/services" className="transition-colors hover:text-[#2c1a0f]">
                                             {link}
                                         </Link>
                                     </li>
@@ -67,7 +67,7 @@ export default function SiteFooter() {
                     <section aria-labelledby="footer-services">
                         <h2
                             id="footer-services"
-                            className="mb-5 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]"
+                            className="mb-5 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]"
                         >
                             Services
                         </h2>
@@ -76,7 +76,7 @@ export default function SiteFooter() {
                                 <li key={link}>
                                     <Link
                                         href={link === "Custom Orthotics" ? "/what-is-biomechanics" : "/services"}
-                                        className="transition-colors hover:text-[#12363a]"
+                                        className="transition-colors hover:text-[#2c1a0f]"
                                     >
                                         {link}
                                     </Link>
@@ -88,34 +88,34 @@ export default function SiteFooter() {
                     <section aria-labelledby="footer-about">
                         <h2
                             id="footer-about"
-                            className="mb-5 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]"
+                            className="mb-5 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]"
                         >
                             About
                         </h2>
                         <ul className="grid gap-2 text-sm leading-relaxed">
                             {aboutLinks.map((link) => (
                                 <li key={link}>
-                                    <Link href="/" className="transition-colors hover:text-[#12363a]">
+                                    <Link href="/" className="transition-colors hover:text-[#2c1a0f]">
                                         {link}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-8 space-y-2 border-t border-[#c6dedb] pt-5 text-sm leading-relaxed text-[#39585c]">
-                            <p className="font-semibold text-[#12363a]">Get In Touch</p>
+                        <div className="mt-8 space-y-2 border-t border-[#d4bfa8] pt-5 text-sm leading-relaxed text-[#5c4033]">
+                            <p className="font-semibold text-[#2c1a0f]">Get In Touch</p>
                             <p>
-                                Phone: <a className="text-[#175d5d] hover:text-[#12363a]" href="tel:+447552514505">07552 514 505</a>
+                                Phone: <a className="text-[#7a5230] hover:text-[#2c1a0f]" href="tel:+447552514505">07552 514 505</a>
                             </p>
                             <p>
-                                Email: <a className="text-[#175d5d] hover:text-[#12363a]" href="mailto:info@footwell-podiatry.co.uk">info@footwell-podiatry.co.uk</a>
+                                Email: <a className="text-[#7a5230] hover:text-[#2c1a0f]" href="mailto:info@footwell-podiatry.co.uk">info@footwell-podiatry.co.uk</a>
                             </p>
                             <p>13 Northway, Broughton, Preston PR3 5JX</p>
                         </div>
                     </section>
                 </div>
 
-                <section className="mt-10 border-t border-[#c6dedb] pt-8" aria-label="Map location">
-                    <div className="overflow-hidden border border-[#c6dedb] bg-[#f5faf9]">
+                <section className="mt-10 border-t border-[#d4bfa8] pt-8" aria-label="Map location">
+                    <div className="overflow-hidden border border-[#d4bfa8] bg-[#faf1e6]">
                         <iframe
                             title="Footwell Podiatry location map"
                             src="https://www.google.com/maps?q=Footwell%20Podiatry%2C%20Broughton&output=embed"
@@ -126,13 +126,13 @@ export default function SiteFooter() {
                     </div>
                 </section>
 
-                <div className="mt-8 flex flex-col gap-3 border-t border-[#c6dedb] pt-6 text-xs text-[#39585c] md:flex-row md:items-center md:justify-between">
-                    <p className="font-medium text-[#12363a]">Footwell Podiatry</p>
+                <div className="mt-8 flex flex-col gap-3 border-t border-[#d4bfa8] pt-6 text-xs text-[#5c4033] md:flex-row md:items-center md:justify-between">
+                    <p className="font-medium text-[#2c1a0f]">Footwell Podiatry</p>
                     <div className="flex items-center gap-4">
-                        <Link href="/" className="transition-colors hover:text-[#12363a]">
+                        <Link href="/" className="transition-colors hover:text-[#2c1a0f]">
                             Privacy Policy
                         </Link>
-                        <Link href="/" className="transition-colors hover:text-[#12363a]">
+                        <Link href="/" className="transition-colors hover:text-[#2c1a0f]">
                             Terms & Conditions
                         </Link>
                     </div>

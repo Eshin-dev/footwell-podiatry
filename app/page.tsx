@@ -32,13 +32,13 @@ export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   return (
-    <main className="bg-[radial-gradient(circle_at_12%_16%,#e6f2f0_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#f4f8f8_0%,#f8fbfb_46%,#eaf3f3_100%)] text-[#12363a]">
+    <main className="bg-[radial-gradient(circle_at_12%_16%,#f0dfc8_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#faf6f1_0%,#fdfaf6_46%,#f5e8d8_100%)] text-[#2c1a0f]">
       <section
         className="relative w-full overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url('${basePath}/main-background-foot.webp')` }}
         aria-labelledby="hero-title"
       >
-        <div className="absolute inset-0 bg-[#f4f8f8]/85" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[#faf6f1]/85" aria-hidden="true" />
         <div className="relative mx-auto flex w-full max-w-6xl justify-center px-6 pb-16 pt-24 md:pb-20 md:pt-28">
           <div className="w-full max-w-5xl text-center">
             <div className="flex justify-center">
@@ -58,14 +58,14 @@ export default function Home() {
             >
               Expert foot care with a calm, personal approach.
             </h1>
-            <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-[#39585c] md:text-xl">
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-[#5c4033] md:text-xl">
               We help you move comfortably, treat pain early, and protect long-term
               foot health with evidence-based podiatry care.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <BookAppointmentButton />
               <Link
-                className="inline-flex min-h-11 items-center justify-center rounded-none border border-[#c6dedb] bg-[#f4faf9] px-4 py-2 font-semibold transition-colors hover:border-[#2f7b79]"
+                className="inline-flex min-h-11 items-center justify-center rounded-none border border-[#d4bfa8] bg-[#faf1e6] px-4 py-2 font-semibold transition-colors hover:border-[#7a5230]"
                 href="/services"
               >
                 View services
@@ -78,7 +78,7 @@ export default function Home() {
       <section id="services" className="py-16 md:py-20" aria-labelledby="services-title">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="mb-7">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]">
               Services
             </p>
             <h2 id="services-title" className="text-3xl font-semibold leading-tight md:text-5xl">
@@ -86,35 +86,35 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
-            <article className="border border-[#c6dedb] bg-white p-5 shadow-[0_7px_18px_rgba(21,74,77,0.05)]">
+            <article className="border border-[#d4bfa8] bg-white p-5 shadow-[0_7px_18px_rgba(74,46,26,0.05)]">
               <h3 className="mb-2 text-lg font-semibold">General Foot Health</h3>
-              <p className="text-[#39585c]">
+              <p className="text-[#5c4033]">
                 Assessment and treatment for common concerns including corns,
                 calluses, thickened nails, and skin discomfort.
               </p>
             </article>
-            <article className="border border-[#c6dedb] bg-white p-5 shadow-[0_7px_18px_rgba(21,74,77,0.05)]">
+            <article className="border border-[#d4bfa8] bg-white p-5 shadow-[0_7px_18px_rgba(74,46,26,0.05)]">
               <h3 className="mb-2 text-lg font-semibold">Biomechanics & Pain</h3>
-              <p className="text-[#39585c]">
+              <p className="text-[#5c4033]">
                 Gait and movement assessments to support heel pain, forefoot pain,
                 and recurring strain from everyday activity.
               </p>
               <Link
                 href="/what-is-biomechanics"
-                className="mt-3 inline-block text-sm font-semibold text-[#175d5d] underline underline-offset-2"
+                className="mt-3 inline-block text-sm font-semibold text-[#7a5230] underline underline-offset-2"
               >
                 Learn about biomechanics
               </Link>
             </article>
-            <article className="border border-[#c6dedb] bg-white p-5 shadow-[0_7px_18px_rgba(21,74,77,0.05)]">
+            <article className="border border-[#d4bfa8] bg-white p-5 shadow-[0_7px_18px_rgba(74,46,26,0.05)]">
               <h3 className="mb-2 text-lg font-semibold">Diabetic Foot Checks</h3>
-              <p className="text-[#39585c]">
+              <p className="text-[#5c4033]">
                 Preventive reviews and risk monitoring to help reduce complications
                 and keep you safely active.
               </p>
               <Link
                 href="/services"
-                className="mt-3 inline-block text-sm font-semibold text-[#175d5d] underline underline-offset-2"
+                className="mt-3 inline-block text-sm font-semibold text-[#7a5230] underline underline-offset-2"
               >
                 View all services
               </Link>
@@ -124,19 +124,19 @@ export default function Home() {
       </section>
 
       <section
-        className="border-y border-[#d7e8e6] bg-[#eef7f5] py-16 md:py-20"
+        className="border-y border-[#dfc8aa] bg-[#f7ede0] py-16 md:py-20"
         aria-labelledby="approach-title"
       >
         <div className="mx-auto grid w-full max-w-6xl gap-6 px-6 md:grid-cols-2 md:items-center">
           <div>
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]">
               Our Approach
             </p>
             <h2 id="approach-title" className="text-3xl font-semibold leading-tight md:text-5xl">
               Clear advice, thoughtful treatment, lasting results
             </h2>
           </div>
-          <div className="space-y-4 text-[#39585c]">
+          <div className="space-y-4 text-[#5c4033]">
             <p>
               Every appointment starts with listening. We explain findings in plain
               language, outline options, and create a treatment plan that suits your
@@ -155,7 +155,7 @@ export default function Home() {
         aria-labelledby="meet-podiatrist-title"
       >
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 md:grid-cols-[0.9fr_1.1fr] md:items-start">
-          <div className="overflow-hidden border border-[#c6dedb] bg-white shadow-[0_10px_30px_rgba(20,63,66,0.08)]">
+          <div className="overflow-hidden border border-[#d4bfa8] bg-white shadow-[0_10px_30px_rgba(74,46,26,0.08)]">
             <Image
               src={`${basePath}/meet_rachel.png`}
               alt="Rachel Rayner, HCPC registered podiatrist"
@@ -171,7 +171,7 @@ export default function Home() {
             >
               Meet Rachel, your HCPC Registered Podiatrist
             </h2>
-            <div className="mt-6 space-y-4 text-[#39585c]">
+            <div className="mt-6 space-y-4 text-[#5c4033]">
               <p>Allow me to introduce myself!</p>
               <p>
                 I am Rachel Rayner, HCPC registered Podiatrist and owner of
@@ -219,7 +219,7 @@ export default function Home() {
       <section className="py-16 md:py-20" aria-labelledby="visit-title">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="mb-7">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]">
               Plan Your Visit
             </p>
             <h2 id="visit-title" className="text-3xl font-semibold leading-tight md:text-5xl">
@@ -227,19 +227,19 @@ export default function Home() {
             </h2>
           </div>
           <ol className="grid list-none gap-4 p-0 md:grid-cols-3">
-            <li className="border border-[#c6dedb] bg-[#f5faf9] p-4">
+            <li className="border border-[#d4bfa8] bg-[#faf1e6] p-4">
               <h3 className="mb-1 text-lg font-semibold">1. Initial Assessment</h3>
-              <p className="text-[#39585c]">We discuss your symptoms, history, and goals.</p>
+              <p className="text-[#5c4033]">We discuss your symptoms, history, and goals.</p>
             </li>
-            <li className="border border-[#c6dedb] bg-[#f5faf9] p-4">
+            <li className="border border-[#d4bfa8] bg-[#faf1e6] p-4">
               <h3 className="mb-1 text-lg font-semibold">2. Clinical Examination</h3>
-              <p className="text-[#39585c]">
+              <p className="text-[#5c4033]">
                 We examine foot health, posture, and movement where relevant.
               </p>
             </li>
-            <li className="border border-[#c6dedb] bg-[#f5faf9] p-4">
+            <li className="border border-[#d4bfa8] bg-[#faf1e6] p-4">
               <h3 className="mb-1 text-lg font-semibold">3. Personal Care Plan</h3>
-              <p className="text-[#39585c]">
+              <p className="text-[#5c4033]">
                 You leave with a clear treatment plan and practical next steps.
               </p>
             </li>
@@ -248,55 +248,55 @@ export default function Home() {
       </section>
 
       <section id="contact" className="pb-24 pt-16 md:pt-20" aria-labelledby="contact-title">
-        <div className="mx-auto grid w-full max-w-6xl gap-5 border border-[#c6dedb] bg-[linear-gradient(150deg,#ffffff_0%,#f4fcfb_70%,#e6f3f1_100%)] p-8 shadow-[0_10px_30px_rgba(20,63,66,0.08)] md:grid-cols-[1.2fr_1fr] md:items-center">
+        <div className="mx-auto grid w-full max-w-6xl gap-5 border border-[#d4bfa8] bg-[linear-gradient(150deg,#ffffff_0%,#fdf9f4_70%,#f0e2ce_100%)] p-8 shadow-[0_10px_30px_rgba(74,46,26,0.08)] md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]">
               Contact
             </p>
             <h2 id="contact-title" className="text-3xl font-semibold leading-tight md:text-5xl">
               Ready to feel comfortable on your feet again?
             </h2>
-            <p className="mt-3 text-[#39585c]">
+            <p className="mt-3 text-[#5c4033]">
               Call to book, or book online at a time that suits you.
             </p>
             <BookAppointmentButton className="mt-5" />
           </div>
-          <address className="grid gap-3 not-italic text-[#39585c]">
+          <address className="grid gap-3 not-italic text-[#5c4033]">
             <p>
-              <strong className="text-[#12363a]">Phone:</strong>{" "}
-              <a className="text-[#0f5f5e] underline underline-offset-2" href="tel:+447552514505">
+              <strong className="text-[#2c1a0f]">Phone:</strong>{" "}
+              <a className="text-[#7a5230] underline underline-offset-2" href="tel:+447552514505">
                 07552 514 505
               </a>
             </p>
             <p>
-              <strong className="text-[#12363a]">Email:</strong>{" "}
+              <strong className="text-[#2c1a0f]">Email:</strong>{" "}
               <a
-                className="text-[#0f5f5e] underline underline-offset-2"
+                className="text-[#7a5230] underline underline-offset-2"
                 href="mailto:info@footwell-podiatry.co.uk"
               >
                 info@footwell-podiatry.co.uk
               </a>
             </p>
             <p>
-              <strong className="text-[#12363a]">Clinic:</strong> 13 Northway,
+              <strong className="text-[#2c1a0f]">Clinic:</strong> 13 Northway,
               Broughton, Preston PR3 5JX
             </p>
-            <div className="mt-1 border-t border-[#c6dedb] pt-4">
-              <p className="mb-2 font-semibold text-[#12363a]">Opening Hours</p>
+            <div className="mt-1 border-t border-[#d4bfa8] pt-4">
+              <p className="mb-2 font-semibold text-[#2c1a0f]">Opening Hours</p>
               <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
-                <dt className="font-medium text-[#12363a]">Mon</dt>
+                <dt className="font-medium text-[#2c1a0f]">Mon</dt>
                 <dd>10:00 - 16:00</dd>
-                <dt className="font-medium text-[#12363a]">Tue</dt>
+                <dt className="font-medium text-[#2c1a0f]">Tue</dt>
                 <dd>Closed</dd>
-                <dt className="font-medium text-[#12363a]">Wed</dt>
+                <dt className="font-medium text-[#2c1a0f]">Wed</dt>
                 <dd>Closed</dd>
-                <dt className="font-medium text-[#12363a]">Thu</dt>
+                <dt className="font-medium text-[#2c1a0f]">Thu</dt>
                 <dd>10:00 - 19:00</dd>
-                <dt className="font-medium text-[#12363a]">Fri</dt>
+                <dt className="font-medium text-[#2c1a0f]">Fri</dt>
                 <dd>10:00 - 16:00</dd>
-                <dt className="font-medium text-[#12363a]">Sat</dt>
+                <dt className="font-medium text-[#2c1a0f]">Sat</dt>
                 <dd>09:00 - 12:00</dd>
-                <dt className="font-medium text-[#12363a]">Sun</dt>
+                <dt className="font-medium text-[#2c1a0f]">Sun</dt>
                 <dd>Closed</dd>
               </dl>
               <p className="mt-3 text-sm">Closed on Bank Holidays</p>

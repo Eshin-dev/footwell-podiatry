@@ -55,9 +55,9 @@ export default function WhatIsBiomechanicsPage() {
     };
 
     return (
-        <main className="bg-[radial-gradient(circle_at_12%_16%,#e6f2f0_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#f4f8f8_0%,#f8fbfb_46%,#eaf3f3_100%)] pb-20 text-[#12363a]">
+        <main className="bg-[radial-gradient(circle_at_12%_16%,#f0dfc8_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#faf6f1_0%,#fdfaf6_46%,#f5e8d8_100%)] pb-20 text-[#2c1a0f]">
             <section className="mx-auto w-full max-w-4xl px-6 pb-8 pt-16 md:pt-20" aria-labelledby="biomechanics-title">
-                <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]">
+                <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]">
                     Foot &amp; Lower Limb Care
                 </p>
                 <h1 id="biomechanics-title" className="text-4xl font-semibold leading-tight md:text-6xl">
@@ -65,9 +65,9 @@ export default function WhatIsBiomechanicsPage() {
                 </h1>
             </section>
 
-            <section className="mx-auto grid w-full max-w-4xl gap-10 px-6 text-[#39585c]">
+            <section className="mx-auto grid w-full max-w-4xl gap-10 px-6 text-[#5c4033]">
                 <article className="space-y-4">
-                    <h2 className="text-2xl font-semibold leading-tight text-[#12363a] md:text-3xl">
+                    <h2 className="text-2xl font-semibold leading-tight text-[#2c1a0f] md:text-3xl">
                         Who may need a biomechanical assessment?
                     </h2>
                     <p>
@@ -104,13 +104,13 @@ export default function WhatIsBiomechanicsPage() {
                         Essentially, if it is foot pain not related to skin and nail issues, this
                         assessment is for you!
                     </p>
-                    <p className="font-semibold text-[#12363a]">
+                    <p className="font-semibold text-[#2c1a0f]">
                         ** Please note we do NOT specialise in running gait analysis
                     </p>
                 </article>
 
                 <article className="space-y-4">
-                    <h2 className="text-2xl font-semibold leading-tight text-[#12363a] md:text-3xl">
+                    <h2 className="text-2xl font-semibold leading-tight text-[#2c1a0f] md:text-3xl">
                         What does the assessment include?
                     </h2>
                     <p>
@@ -138,7 +138,7 @@ export default function WhatIsBiomechanicsPage() {
                 </article>
 
                 <article className="space-y-4">
-                    <h2 className="text-2xl font-semibold leading-tight text-[#12363a] md:text-3xl">
+                    <h2 className="text-2xl font-semibold leading-tight text-[#2c1a0f] md:text-3xl">
                         How do Podiatrists treat foot and ankle pain?
                     </h2>
                     <p>
@@ -161,7 +161,7 @@ export default function WhatIsBiomechanicsPage() {
                 </article>
 
                 <article className="space-y-4">
-                    <h2 className="text-2xl font-semibold leading-tight text-[#12363a] md:text-3xl">
+                    <h2 className="text-2xl font-semibold leading-tight text-[#2c1a0f] md:text-3xl">
                         What is the purpose of an Orthotic?
                     </h2>
                     <p>
@@ -185,7 +185,7 @@ export default function WhatIsBiomechanicsPage() {
                 </article>
 
                 <article className="space-y-4">
-                    <h2 className="text-2xl font-semibold leading-tight text-[#12363a] md:text-3xl">
+                    <h2 className="text-2xl font-semibold leading-tight text-[#2c1a0f] md:text-3xl">
                         What is the difference between a prefabricated, semi-custom and custom orthotic?
                     </h2>
                     <p>
@@ -209,8 +209,8 @@ export default function WhatIsBiomechanicsPage() {
                     </p>
                 </article>
 
-                <article className="space-y-4 border border-[#c6dedb] bg-[linear-gradient(150deg,#ffffff_0%,#f4fcfb_70%,#e6f3f1_100%)] p-6 shadow-[0_10px_30px_rgba(20,63,66,0.08)] md:p-8">
-                    <h2 className="text-2xl font-semibold leading-tight text-[#12363a] md:text-3xl">
+                <article className="space-y-4 border border-[#d4bfa8] bg-[linear-gradient(150deg,#ffffff_0%,#fdf9f4_70%,#f0e2ce_100%)] p-6 shadow-[0_10px_30px_rgba(74,46,26,0.08)] md:p-8">
+                    <h2 className="text-2xl font-semibold leading-tight text-[#2c1a0f] md:text-3xl">
                         The Footwell Standard
                     </h2>
                     <p>
@@ -251,7 +251,7 @@ export default function WhatIsBiomechanicsPage() {
                         orthotics we will also give you advice on how to build your tolerance to these,
                         how to look after them and when to come back for a review.
                     </p>
-                    <p className="font-semibold text-[#12363a]">
+                    <p className="font-semibold text-[#2c1a0f]">
                         ** Please note we do not specialise in running gait analysis
                     </p>
                     <div className="pt-2">

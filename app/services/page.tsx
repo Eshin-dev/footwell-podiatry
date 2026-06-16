@@ -119,20 +119,20 @@ export default function ServicesPage() {
     };
 
     return (
-        <main className="bg-[radial-gradient(circle_at_12%_16%,#e6f2f0_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#f4f8f8_0%,#f8fbfb_46%,#eaf3f3_100%)] pb-20 text-[#12363a]">
+        <main className="bg-[radial-gradient(circle_at_12%_16%,#f0dfc8_0,transparent_30%),radial-gradient(circle_at_88%_22%,#f8ece1_0,transparent_26%),linear-gradient(180deg,#faf6f1_0%,#fdfaf6_46%,#f5e8d8_100%)] pb-20 text-[#2c1a0f]">
             <section
                 className="relative overflow-hidden bg-cover bg-center"
                 style={{ backgroundImage: `url('${basePath}/main-background-foot.webp')` }}
             >
-                <div className="absolute inset-0 bg-[#f4f8f8]/85" aria-hidden="true" />
+                <div className="absolute inset-0 bg-[#faf6f1]/85" aria-hidden="true" />
                 <div className="relative mx-auto w-full max-w-6xl px-6 pb-14 pt-20 md:pb-16 md:pt-24">
-                    <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#2f7b79]">
+                    <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-[#7a5230]">
                         Appointments and Prices
                     </p>
                     <h1 className="max-w-3xl text-4xl font-semibold leading-tight md:text-6xl">
                         Service Details and Price List
                     </h1>
-                    <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#39585c] md:text-lg">
+                    <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#5c4033] md:text-lg">
                         Clear pricing and straightforward appointment options so you know what
                         to expect before you book.
                     </p>
@@ -143,24 +143,24 @@ export default function ServicesPage() {
                 {services.map((service) => (
                     <article
                         key={service.name}
-                        className="border border-[#c6dedb] bg-white p-6 shadow-[0_10px_30px_rgba(20,63,66,0.08)]"
+                        className="border border-[#d4bfa8] bg-white p-6 shadow-[0_10px_30px_rgba(74,46,26,0.08)]"
                     >
-                        <div className="flex flex-wrap items-start justify-between gap-3 border-b border-[#e3efee] pb-4">
+                        <div className="flex flex-wrap items-start justify-between gap-3 border-b border-[#e8d5c0] pb-4">
                             <div>
-                                <h2 className="text-2xl font-semibold leading-tight text-[#12363a] md:text-3xl">
+                                <h2 className="text-2xl font-semibold leading-tight text-[#2c1a0f] md:text-3xl">
                                     {service.name}
                                 </h2>
-                                <p className="mt-2 text-sm text-[#39585c]">{service.duration}</p>
+                                <p className="mt-2 text-sm text-[#5c4033]">{service.duration}</p>
                             </div>
-                            <p className="rounded-none bg-[#e8f4f2] px-4 py-2 text-lg font-semibold text-[#175d5d]">
+                            <p className="rounded-none bg-[#f5e8d8] px-4 py-2 text-lg font-semibold text-[#7a5230]">
                                 {service.price}
                             </p>
                         </div>
 
-                        <ul className="mt-4 grid gap-2 text-[#39585c]">
+                        <ul className="mt-4 grid gap-2 text-[#5c4033]">
                             {service.details.map((detail) => (
                                 <li key={detail} className="flex gap-2 leading-relaxed">
-                                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#2f7b79]" aria-hidden="true" />
+                                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#7a5230]" aria-hidden="true" />
                                     <span>{detail}</span>
                                 </li>
                             ))}
