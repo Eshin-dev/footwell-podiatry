@@ -39,8 +39,6 @@ export default function ReviewCard({ review }: { review: Review }) {
       <p className="grow text-sm leading-relaxed text-[#5c4033]">
         {review.text}
       </p>
-
-      <p className="mt-3 text-xs text-[#5c4033]/70">{review.relativeDate}</p>
     </article>
   );
 }
