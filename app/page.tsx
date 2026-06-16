@@ -54,7 +54,7 @@ export default function Home() {
             </div>
             <h1
               id="hero-title"
-              className="mx-auto max-w-[16ch] text-center text-4xl font-semibold leading-tight md:text-6xl"
+              className="mx-auto max-w-[16ch] text-center text-4xl font-semibold leading-tight md:max-w-none md:text-6xl"
             >
               Expert foot care with a calm, personal approach.
             </h1>
