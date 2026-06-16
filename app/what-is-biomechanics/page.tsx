@@ -3,16 +3,16 @@ import BookAppointmentButton from "../book-appointment-button";
 import { SITE_NAME, absoluteUrl } from "../seo";
 
 export const metadata: Metadata = {
-    title: "What is Biomechanics?",
+    title: "Biomechanics Assessment | Podiatrist in Preston, Lancashire",
     description:
-        "Learn who may need a biomechanics assessment, what it includes, and how orthotics can help with foot, ankle, and lower-limb pain.",
+        "Find out how a biomechanics assessment from our Preston podiatrist can help with foot pain, heel pain, plantar fasciitis, and lower-limb problems. Serving Preston and across Lancashire.",
     alternates: {
         canonical: "/what-is-biomechanics",
     },
     openGraph: {
-        title: `What is Biomechanics? | ${SITE_NAME}`,
+        title: `Biomechanics Assessment | Podiatrist in Preston, Lancashire | ${SITE_NAME}`,
         description:
-            "A clear guide to biomechanics assessments, orthotics, and treatment options from Footwell Podiatry.",
+            "A biomechanics assessment from our HCPC registered Preston podiatrist can identify the causes of foot and ankle pain and guide treatment with custom orthotics.",
         url: absoluteUrl("/what-is-biomechanics"),
     },
 };

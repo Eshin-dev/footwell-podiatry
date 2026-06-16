@@ -3,16 +3,16 @@ import BookAppointmentButton from "../book-appointment-button";
 import { SITE_NAME, absoluteUrl } from "../seo";
 
 export const metadata: Metadata = {
-    title: "Podiatry Services and Prices",
+    title: "Podiatry Services & Prices | Preston, Lancashire",
     description:
-        "View Footwell Podiatry service details and prices, including routine podiatry care, biomechanics assessments, verruca treatment, and home visits.",
+        "Podiatry services and prices from Footwell Podiatry in Preston, Lancashire. Routine foot care, nail surgery, verruca treatment, biomechanics assessments, and diabetic foot checks. Serving Preston and across Lancashire.",
     alternates: {
         canonical: "/services",
     },
     openGraph: {
-        title: `Services and Prices | ${SITE_NAME}`,
+        title: `Podiatry Services & Prices | Preston, Lancashire | ${SITE_NAME}`,
         description:
-            "Clear service options and pricing for podiatry appointments in Broughton, Preston.",
+            "Clear pricing for podiatry appointments in Preston, Lancashire — routine care, nail surgery, biomechanics, and more.",
         url: absoluteUrl("/services"),
     },
 };

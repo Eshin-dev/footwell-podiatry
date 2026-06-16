@@ -29,17 +29,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(`${SITE_URL_WITH_BASE_PATH}/`),
   title: {
-    default: "Footwell Podiatry | Podiatrist in Broughton, Preston",
+    default: "Footwell Podiatry | Podiatrist in Preston, Lancashire",
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Footwell Podiatry provides patient-focused podiatry care in Broughton, Preston, including routine foot care, biomechanics assessments, and diabetic foot checks.",
+    "Footwell Podiatry is a HCPC registered podiatrist in Broughton, Preston, Lancashire. We provide routine foot care, biomechanics assessments, nail surgery, verruca treatment, and diabetic foot checks. Serving Preston, Broughton, and across Lancashire.",
   keywords: [
-    "podiatrist Broughton",
     "podiatrist Preston",
+    "podiatrist Lancashire",
+    "podiatrist Broughton",
+    "chiropodist Preston",
+    "chiropodist Lancashire",
     "foot care Preston",
-    "biomechanics assessment",
-    "diabetic foot care",
+    "HCPC podiatrist Preston",
+    "biomechanics assessment Preston",
+    "diabetic foot care Preston",
+    "ingrown toenail treatment Preston",
+    "verruca treatment Preston",
+    "plantar fasciitis Preston",
     "Footwell Podiatry",
   ],
   alternates: {
@@ -50,9 +57,9 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: absoluteUrl("/"),
     siteName: SITE_NAME,
-    title: "Footwell Podiatry | Podiatrist in Broughton, Preston",
+    title: "Footwell Podiatry | Podiatrist in Preston, Lancashire",
     description:
-      "Professional, patient-focused podiatry care in Broughton, Preston. Book routine appointments, biomechanics assessments, and diabetic foot checks.",
+      "HCPC registered podiatrist in Broughton, Preston, Lancashire. Routine foot care, biomechanics, nail surgery, and diabetic foot checks. Book online today.",
     images: [
       {
         url: absoluteUrl("/footwell_logo.webp"),
@@ -64,9 +71,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Footwell Podiatry | Podiatrist in Broughton, Preston",
+    title: "Footwell Podiatry | Podiatrist in Preston, Lancashire",
     description:
-      "Professional, patient-focused podiatry care in Broughton, Preston.",
+      "HCPC registered podiatrist in Broughton, Preston, Lancashire. Routine foot care, biomechanics, and diabetic foot checks.",
     images: [absoluteUrl("/footwell_logo.webp")],
   },
   icons: {
@@ -112,7 +119,20 @@ export default function RootLayout({
       opens: hours.opens,
       closes: hours.closes,
     })),
-    areaServed: "Preston",
+    areaServed: [
+      "Preston",
+      "Lancashire",
+      "Broughton",
+      "Fulwood",
+      "Longridge",
+      "Garstang",
+      "Kirkham",
+    ],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 53.8108,
+      longitude: -2.7192,
+    },
     priceRange: "GBP",
     contactPoint: {
       "@type": "ContactPoint",

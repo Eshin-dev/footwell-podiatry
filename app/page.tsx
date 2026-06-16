@@ -59,8 +59,7 @@ export default function Home() {
               Expert foot care with a calm, personal approach.
             </h1>
             <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-[#5c4033] md:text-xl">
-              We help you move comfortably, treat pain early, and protect long-term
-              foot health with evidence-based podiatry care.
+              HCPC registered podiatry care in Broughton, Preston, Lancashire. We help you move comfortably, treat pain early, and protect long-term foot health.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <BookAppointmentButton />
